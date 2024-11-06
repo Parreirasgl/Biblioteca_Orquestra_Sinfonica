@@ -19,14 +19,14 @@
 
 <div class="container text-center">
 
-  <h1 class="larger-text">Acervo de Partituras</h1>
+  <h1 class="larger-text titulo">Acervo de Partituras</h1>
 
   <hr style="background-color: rgb(83, 83, 83);">
 
   <!-- Filtros -->
   <form action="" method="GET" class="form-inline mb-2 ml-auto justify-content-between">
     <!-- Botão para ver filtros -->
-    <button type="button" id="ver-filtros-btn" class="btn btn-info">Ver Filtros</button>
+    <button type="button" id="ver-filtros-btn" class="btn btn-success">Ver Filtros</button>
   
     <!-- Contêiner que contém todos os filtros, inicialmente escondido -->
     <div id="filtros" style="display: none;">
@@ -74,7 +74,7 @@
     </br>
       
       <!-- Botão de filtrar -->
-      <button type="submit" class="btn btn-info">Filtrar</button>
+      <button type="submit" class="btn btn-success">Filtrar</button>
   
       <!-- Botão para ocultar os filtros -->
       <button type="button" id="ocultar-filtros-btn" class="btn btn-secondary">Ocultar Filtros</button>
@@ -98,7 +98,7 @@
                   
                     <div class="card-body">
 
-                      <h5 class="card-title">{{ livro.obra }}</h5>
+                      <p class="card-text titulo"><strong>{{ livro.obra }}</strong></p>
                       <p class="card-text"><strong>Categoria:</strong> {{ livro.categoria }}</p>
                       <p class="card-text"><strong>Classificação:</strong> {{ livro.classificacao }}</p>
                       <p class="card-text"><strong>Localização:</strong> {{ livro.localizacao }}</p>
@@ -124,7 +124,7 @@
                         <br>
                       
                           
-                      <a href="{% url 'ver_livros' livro.id %}" class="btn btn-info" aria-label="{{ livro.obra }}">Acessar</a>
+                      <a href="{% url 'ver_livros' livro.id %}" class="btn btn-success" aria-label="{{ livro.obra }}">Acessar</a>
                         
 
                       <!-- <a href="{% url 'ver_livros' livro.id %}">

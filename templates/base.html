@@ -22,7 +22,7 @@
             background-attachment: fixed; /* Para manter a imagem fixa enquanto rola a página */
             /* background-color: antiquewhite; Cor de fundo */
             background-color: #f0f0f0; /* Cor de fundo */
-            color:#040100
+            color:#716f6e
         }
 
         .table.table-striped {
@@ -58,6 +58,16 @@
             box-shadow: 5px 5px 25px rgba(255, 255, 255, 0.5); 
         }
 
+        .btn-success {
+        background-color: #006400; /* Verde escuro para atingir critério de contraste */
+        border-color: #005f00;
+        }
+
+        .btn-success:hover {
+        background-color: #004b00; /* Verde ainda mais escuro */
+        border-color: #004000; /* Cor de fundo ao passar o mouse */
+        }
+
         /* Estilos de alto contraste */
         body.alto-contraste {
             background-color: black;
@@ -85,6 +95,7 @@
 
 <nav class="navbar navbar-dark bg-dark">
     <a class="navbar-brand" style="font-family: 'NomeDaFonte', sans-serif; font-size: 24px; color: #ffffff;" href="{% url 'home' %}">Biblioteca - Arquivo Banda Henrique Marques</a>
+    
     <!-- Botão alto contraste -->
     <div>
         <button id="btn-alto-contraste" class="btn btn-secondary" onclick="toggleContraste()">Ativar Alto Contraste</button>
@@ -93,7 +104,7 @@
     <!-- Botão ajuste do tamanho da fonte -->
     <div class="d-flex align-items-center">
     <div class="text-controls" style="color: white; margin-right: 20px; font-size: 16px;">
-        Tamanho da Fonte: 
+        <span>Tamanho da Fonte: </span> 
         <button id="increase-font" class="btn btn-secondary btn-sm">+</button>
         <button id="decrease-font" class="btn btn-secondary btn-sm">-</button>
     </div>
